@@ -1,0 +1,304 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{735061B5-3849-470F-B263-9C2EDC36DF02}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RECIPE_WEBSITE</RootNamespace>
+    <AssemblyName>RECIPE WEBSITE</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ABOUT.aspx" />
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="BREAKFAST.aspx" />
+    <Content Include="CHINESE.aspx" />
+    <Content Include="CHINESE\chowmein.jpg" />
+    <Content Include="CHINESE\dumpling.jpg" />
+    <Content Include="CHINESE\hotpot.jpg" />
+    <Content Include="CHINESE\mapodoufu.jpg" />
+    <Content Include="CHINESE\springroll.jpg" />
+    <Content Include="CONTACT.aspx" />
+    <Content Include="DINNER\dal.jpg" />
+    <Content Include="DINNER\matar.jpg" />
+    <Content Include="DINNER\tandoori.jpg" />
+    <Content Include="DINNER\veg.jpg" />
+    <Content Include="DINNER.aspx" />
+    <Content Include="DRINKS.aspx" />
+    <Content Include="DRINKS\beach.jpeg" />
+    <Content Include="DRINKS\berry.jpeg" />
+    <Content Include="DRINKS\italian.jpeg" />
+    <Content Include="DRINKS\martini.jpeg" />
+    <Content Include="DRINKS\mojito.jpeg" />
+    <Content Include="FEEDBACK.aspx" />
+    <Content Include="FRENCH.aspx" />
+    <Content Include="FRENCH\bauillabaisse.jpg" />
+    <Content Include="FRENCH\boeuf.jpg" />
+    <Content Include="FRENCH\coqauvin.jpg" />
+    <Content Include="FRENCH\quicheloraine.jpg" />
+    <Content Include="FRENCH\ratatouille.jpg" />
+    <Content Include="HOME.aspx" />
+    <Content Include="INDIAN.aspx" />
+    <Content Include="INDIAN\dhokla.jpg" />
+    <Content Include="INDIAN\gulab.jpg" />
+    <Content Include="INDIAN\leg.jpg" />
+    <Content Include="INDIAN\pani.jpg" />
+    <Content Include="INDIAN\samosa.jpg" />
+    <Content Include="ITALIAN.aspx" />
+    <Content Include="ITALIAN\lasagna.jpg" />
+    <Content Include="ITALIAN\pizza.jpg" />
+    <Content Include="ITALIAN\prosciutto.jpg" />
+    <Content Include="ITALIAN\ravioli.jpg" />
+    <Content Include="ITALIAN\salad.jpg" />
+    <Content Include="LOGO\Chef’s Book.png" />
+    <Content Include="BREAKFAST\Dosa.jpg" />
+    <Content Include="BREAKFAST\Pasta.jpg" />
+    <Content Include="BREAKFAST\Sandwich.jpg" />
+    <Content Include="BREAKFAST\Shira.jpg" />
+    <Content Include="BREAKFAST\Upma.jpg" />
+    <Content Include="LOGO\facebook.png" />
+    <Content Include="LOGO\instagram.png" />
+    <Content Include="LOGO\twitter.jpg" />
+    <Content Include="LUNCH\biriyani.jpg" />
+    <Content Include="LUNCH\butter.jpg" />
+    <Content Include="LUNCH\palak.jpg" />
+    <Content Include="LUNCH\pav.jpg" />
+    <Content Include="LUNCH\tikka.jpg" />
+    <Content Include="LUNCH.aspx" />
+    <Content Include="SIGN IN.aspx" />
+    <Content Include="SIGN UP.aspx" />
+    <Content Include="DINNER\naan.jpg" />
+    <Content Include="SPANISH.aspx" />
+    <Content Include="SPANISH\churros.jpg" />
+    <Content Include="SPANISH\cochinillo.jpg" />
+    <Content Include="SPANISH\crema.jpg" />
+    <Content Include="SPANISH\fabada.jpg" />
+    <Content Include="SPANISH\pulpo.jpg" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm2.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABOUT.aspx.cs">
+      <DependentUpon>ABOUT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABOUT.aspx.designer.cs">
+      <DependentUpon>ABOUT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BREAKFAST.aspx.cs">
+      <DependentUpon>BREAKFAST.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BREAKFAST.aspx.designer.cs">
+      <DependentUpon>BREAKFAST.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CHINESE.aspx.cs">
+      <DependentUpon>CHINESE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CHINESE.aspx.designer.cs">
+      <DependentUpon>CHINESE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CONTACT.aspx.cs">
+      <DependentUpon>CONTACT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CONTACT.aspx.designer.cs">
+      <DependentUpon>CONTACT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DINNER.aspx.cs">
+      <DependentUpon>DINNER.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DINNER.aspx.designer.cs">
+      <DependentUpon>DINNER.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DRINKS.aspx.cs">
+      <DependentUpon>DRINKS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DRINKS.aspx.designer.cs">
+      <DependentUpon>DRINKS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FEEDBACK.aspx.cs">
+      <DependentUpon>FEEDBACK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FEEDBACK.aspx.designer.cs">
+      <DependentUpon>FEEDBACK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRENCH.aspx.cs">
+      <DependentUpon>FRENCH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRENCH.aspx.designer.cs">
+      <DependentUpon>FRENCH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HOME.aspx.cs">
+      <DependentUpon>HOME.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HOME.aspx.designer.cs">
+      <DependentUpon>HOME.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="INDIAN.aspx.cs">
+      <DependentUpon>INDIAN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="INDIAN.aspx.designer.cs">
+      <DependentUpon>INDIAN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ITALIAN.aspx.cs">
+      <DependentUpon>ITALIAN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ITALIAN.aspx.designer.cs">
+      <DependentUpon>ITALIAN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LUNCH.aspx.cs">
+      <DependentUpon>LUNCH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LUNCH.aspx.designer.cs">
+      <DependentUpon>LUNCH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SIGN IN.aspx.cs">
+      <DependentUpon>SIGN IN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SIGN IN.aspx.designer.cs">
+      <DependentUpon>SIGN IN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SIGN UP.aspx.cs">
+      <DependentUpon>SIGN UP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SIGN UP.aspx.designer.cs">
+      <DependentUpon>SIGN UP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SPANISH.aspx.cs">
+      <DependentUpon>SPANISH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SPANISH.aspx.designer.cs">
+      <DependentUpon>SPANISH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57499</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
